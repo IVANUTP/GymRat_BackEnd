@@ -1,0 +1,4 @@
+ALTER TABLE tbl_ejercicios
+ADD COLUMN gif VARCHAR(500),
+ADD COLUMN equipo VARCHAR(100),
+ADD COLUMN dificultad VARCHAR(50);
