@@ -7,7 +7,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface RutinaRepository extends JpaRepository<RutinaEntity, Long > {
+public interface RutinaRepository extends JpaRepository<RutinaEntity, Long> {
        List<RutinaEntity> findByUsuario_IdUsuario(Long idUsuario);
        List<RutinaEntity> findByNombreContainingIgnoreCase(String nombre);
+       List<RutinaEntity> findByObjetivo_IdObjetivoAndTipoRutina_IdTipoRutinaAndEsPlantillaTrue(
+               Long idObjetivo, Long idTipoRutina
+       );
 }

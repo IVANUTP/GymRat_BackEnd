@@ -10,6 +10,8 @@ public class UsuarioRequest {
 
     private Long idRol;
 
+    private Short idNivel;
+
     private String nombre;
 
     private String correo;

@@ -27,4 +27,6 @@ public class UsuarioResponse {
     private LocalDate fechaNacimiento;
 
     private String rol;
+
+    private String nivel; // nombre del nivel: "Principiante", "Intermedio", "Avanzado"
 }

@@ -1,0 +1,2 @@
+ALTER TABLE tbl_rutinas ADD COLUMN es_plantilla BOOLEAN DEFAULT FALSE;
+ALTER TABLE tbl_rutinas ALTER COLUMN id_usuario DROP NOT NULL;
