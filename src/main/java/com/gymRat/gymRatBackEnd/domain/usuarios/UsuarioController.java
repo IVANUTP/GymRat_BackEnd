@@ -1,5 +1,7 @@
 package com.gymRat.gymRatBackEnd.domain.usuarios;
 
+import com.gymRat.gymRatBackEnd.domain.usuarios.DTM.CrearUsuarioRequest;
+import com.gymRat.gymRatBackEnd.domain.usuarios.DTM.UsuarioRequest;
 import com.gymRat.gymRatBackEnd.domain.usuarios.Entity.UsuarioEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -28,14 +30,14 @@ public class UsuarioController {
        );
    }
 
-   @PostMapping
-    public ResponseEntity<UsuarioEntity>guardar(
-            @RequestBody UsuarioEntity usuario
-   ){
-       return  ResponseEntity
-               .status(HttpStatus.CREATED)
-               .body(usuarioService.guardar(usuario));
-   }
+    @PostMapping
+    public ResponseEntity<UsuarioEntity> guardar(
+            @RequestBody CrearUsuarioRequest request
+    ){
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(usuarioService.guardar(request));
+    }
     @PutMapping("/{id}")
     public UsuarioEntity actualizar(
             @PathVariable Long id,
